@@ -1,0 +1,32 @@
+import FormulaPlayGround from "@/components/FormulaPlayground";
+import TaulaDeTipologies from "@/components/TaulaDeTipologies";
+
+# Rúbrica de correcció de problemes de programació
+
+La rúbrica té 4 aspectes:
+
+- **Correctesa** ($C$): El programa és "correcte" (passa els jocs de prova del Jutge). Amb
+  l'excepció d'errors i coses que el jutge no pugui detectar.
+
+- **Simplicitat** ($S$): El programa és simple i elegant.
+
+- **Legibilitat** ($L$): El programa és comprensible per un altre humà.
+
+- **Eficiència** ($E$): El programa és ràpid. Això es pot detectar tant amb el Jutge com
+  amb correcció manual (com en el cas de recorreguts i cerques).
+
+## Fórmula
+
+La fórmula és la següent:
+
+$$
+\Big(0.5 \cdot C + 0.3 \cdot S  + 0.2 \cdot L \Big) \cdot \Big(0.5 + 0.5 \frac{E}{10}\Big)
+$$
+
+Els 3 primers aspectes $C$, $S$ i $L$ són notes entre 0 i 10 i sumen parts acumulatives de la nota final, per una banda. Però aquesta nota producte de $C$, $S$, i $L$, també entre 0 i 10, està ponderada per una altra que depèn de l'eficiència $E$, amb una cota màxima de contribució.
+
+<FormulaPlayGround />
+
+Exemples de resultats:
+
+<TaulaDeTipologies />
