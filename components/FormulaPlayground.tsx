@@ -62,7 +62,11 @@ export default function FormulaPlayground() {
           {grade(state).toFixed(1)}
         </div>
       </div>
-      <p>Exemples de tipologies de problemes i les seves notes:</p>
+      <p>
+        Exemples de tipologies de problemes i les seves notes. Aquí té importància
+        mirar els cassos límit per veure l&apos;efecte que tenen els diferents
+        aspectes.
+      </p>
       <div className="flex flex-row justify-center">
         <div>
           <TaulaDeTipologies
