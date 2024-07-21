@@ -13,7 +13,7 @@ export default async function FormulaFixed() {
   const formula = `$$\n${P} \\times ${Q}\n$$`;
 
   return (
-    <div className="text-[1.1rem] my-6">
+    <div className="text-[1.2rem] my-6">
       <MDXRemote
         source={formula}
         options={{
