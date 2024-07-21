@@ -11,15 +11,25 @@ La rúbrica té 4 aspectes:
 
 <Quadre>
 
-- <span className="text-blue-500">**Correctesa**</span> ($C$): El programa és "correcte" (passa els jocs de prova del Jutge). Amb
-  l'excepció d'errors i coses que el jutge no pugui detectar.
+- <span className="text-blue-500">**Correctesa**</span> ($C$): El programa és "correcte". 
+  - Passa els jocs de prova del Jutge (excepte potser els que tinguin a veure amb eficiència).
+  - La correcció manual no troba errors que hagin donat la sortida correcta "per sort".
+  - Les pre-condicions i post-condicions són correctes.
 
 - <span className="text-green-600">**Simplicitat**</span> ($S$): El programa és simple i elegant.
+  - S'utilitza el mínim d'instruccions que aconsegueixen l'objectiu.
+  - Hi ha funcions per evitar repetició i dividir el problema en parts.
 
-- <span className="text-yellow-600">**Legibilitat**</span> ($L$): El programa és comprensible per un altre humà.
+- <span className="text-yellow-600">**Legibilitat**</span> ($L$): El programa és comprensible
+  per un altre humà. 
+  - Té un format estàndar (`clang-format`).
+  - Els noms de variables i funcions es corresponen amb la seva utilització real.
+  - Els comentaris són adequats.
 
-- <span className="text-red-500">**Eficiència**</span> ($E$): El programa és ràpid. Això es pot detectar tant amb el Jutge com
-  amb correcció manual (com en el cas de recorreguts i cerques).
+- <span className="text-red-500">**Eficiència**</span> ($E$): El programa utilitza l'algorisme més eficient 
+  per la tasca demanada.
+  - Un recorregut si es pot fer una cerca implica $E = 0$. 
+  - Quan el Jutge inclou jocs de prova d'eficiència, aquests avaluen $E$ directament.
 
 </Quadre>
 

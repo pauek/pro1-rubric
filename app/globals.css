@@ -85,6 +85,22 @@ table td {
 p {
   @apply leading-6 my-4;
 }
+ul li p {
+  @apply my-0;
+}
+ul ul li {
+  list-style-type: disc;
+  @apply ml-6 text-sm;
+}
+ul ul li + li {
+  @apply mt-0 mb-0;
+}
+ul li + li {
+  @apply my-4;
+}
+ul li:last-child {
+  @apply mb-0;
+}
 h1 {
   @apply font-bold text-3xl mb-4;
 }
