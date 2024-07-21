@@ -1,32 +1,48 @@
 import FormulaPlayGround from "@/components/FormulaPlayground";
 import TaulaDeTipologies from "@/components/TaulaDeTipologies";
+import Formula from "@/components/Formula";
+import Quadre from "@/components/Quadre";
+import diagram from "./Rubrica-PRO1-diagram.svg";
+import Image from "next/image";
 
-# Rúbrica de correcció de problemes de programació
+# PRO1: Rúbrica de correcció
 
 La rúbrica té 4 aspectes:
 
-- **Correctesa** ($C$): El programa és "correcte" (passa els jocs de prova del Jutge). Amb
+<Quadre>
+
+- <span className="text-blue-500">**Correctesa**</span> ($C$): El programa és "correcte" (passa els jocs de prova del Jutge). Amb
   l'excepció d'errors i coses que el jutge no pugui detectar.
 
-- **Simplicitat** ($S$): El programa és simple i elegant.
+- <span className="text-green-600">**Simplicitat**</span> ($S$): El programa és simple i elegant.
 
-- **Legibilitat** ($L$): El programa és comprensible per un altre humà.
+- <span className="text-yellow-600">**Legibilitat**</span> ($L$): El programa és comprensible per un altre humà.
 
-- **Eficiència** ($E$): El programa és ràpid. Això es pot detectar tant amb el Jutge com
+- <span className="text-red-500">**Eficiència**</span> ($E$): El programa és ràpid. Això es pot detectar tant amb el Jutge com
   amb correcció manual (com en el cas de recorreguts i cerques).
+
+</Quadre>
 
 ## Fórmula
 
-La fórmula és la següent:
+La fórmula és la multiplicació de dos factors, $P$ i $Q$, que apareixen en la fórmula
+següent, entre parèntesis:
 
-$$
-\Big(0.5 \cdot C + 0.3 \cdot S  + 0.2 \cdot L \Big) \cdot \Big(0.5 + 0.5 \frac{E}{10}\Big)
-$$
+<Formula />
 
-Els 3 primers aspectes $C$, $S$ i $L$ són notes entre 0 i 10 i sumen parts acumulatives de la nota final, per una banda. Però aquesta nota producte de $C$, $S$, i $L$, també entre 0 i 10, està ponderada per una altra que depèn de l'eficiència $E$, amb una cota màxima de contribució.
+Els 3 primers aspectes $C$, $S$ i $L$ són notes entre 0 i 10 i sumen parts acumulatives
+d'un dels factors, $P$, amb valor també entre 0 i 10. $P$ es **multiplica** per l'altre
+factor, $Q$, que depèn de l'eficiència $E$, i té una cota màxima de contribució.
+
+Un possible diagrama seria:
+
+<div className="flex flex-row justify-center">
+  <Image src={diagram} alt="Diagrama de la fórmula" width={600} height={300} />
+</div>
+
+## Playground
+
+Aquí sota pots jugar amb les notes de cada aspecte per veure el resultat que dóna en
+cassos particulars (clica files de la taula per recuperar els seus valors de cop):
 
 <FormulaPlayGround />
-
-Exemples de resultats:
-
-<TaulaDeTipologies />

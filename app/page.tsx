@@ -1,5 +1,3 @@
-"use client"
-
 import Rubric from "@/components/Rubric.mdx";
 
 export default function Home() {
