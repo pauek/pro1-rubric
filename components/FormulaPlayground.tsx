@@ -1,11 +1,18 @@
 "use client";
 
-import { alpha, beta, backgroundColors, delta, gamma, Grade } from "@/lib/params";
+import {
+  alpha,
+  beta,
+  backgroundColors,
+  delta,
+  gamma,
+  Grade,
+} from "@/lib/params";
 import { useState } from "react";
 import TaulaDeTipologies from "./TaulaDeTipologies";
 import { Label } from "./ui/label";
 import { Slider } from "./ui/slider";
-
+import React from "react";
 
 export default function FormulaPlayground() {
   const [state, setState] = useState<Grade>({ C: 0, S: 0, L: 0, E: 0 });
@@ -17,7 +24,7 @@ export default function FormulaPlayground() {
     <>
       <div className="m-auto max-w-[24rem] my-8">
         {Object.entries(state).map(([key, val], i) => (
-          <>
+          <React.Fragment key={key}>
             {key === "E" ? (
               <div className="h-0 border-t mt-2 mb-2"></div>
             ) : (
@@ -41,7 +48,7 @@ export default function FormulaPlayground() {
               />
               <div className="w-10 text-right text-lg">{val.toFixed(1)}</div>
             </Label>
-          </>
+          </React.Fragment>
         ))}
         <div className="h-0 border-b border-b-black mt-2 mb-2"></div>
         <div className="font-bold mt-2 text-xl flex flex-row justify-end">
