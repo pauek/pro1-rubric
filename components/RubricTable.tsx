@@ -74,9 +74,7 @@ export default async function RubricTable() {
                 S&apos;utilitza <code>string</code> o<code>vector</code> quan no
                 és necessari.
               </p>
-              <p>
-                Gairebé cada instrucció o expressió es podria simplificar.
-              </p>
+              <p>Gairebé cada instrucció o expressió es podria simplificar.</p>
             </td>
 
             <td>
@@ -170,17 +168,19 @@ export default async function RubricTable() {
             </td>
             <td></td>
             <td>
-              <h4>El programa fa més operacions de les necessàries.</h4>
+              <h4>L&apos;algorisme fa algunes operacions innecessàries.</h4>
               <p>
                 El programa passa els jocs de prova específics
                 d&apos;eficiència, malgrat la correcció manual detecta que es
-                podrien fer menys operacions.
+                podrien fer menys operacions, degut a repetició de càlculs o
+                expressions.
               </p>
             </td>
             <td></td>
             <td>
               <h4>
-                El programa fa les operacions mínimes per resoldre el problema.
+                L&apos;algorisme triat fa el mínim número d&apos;operacions per
+                resoldre el problema.
               </h4>
               <p>
                 El programa passa els jocs de prova sobre eficiència i la
