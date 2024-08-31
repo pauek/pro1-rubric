@@ -1,9 +1,8 @@
-import { backgroundColors, textColors } from "@/lib/params";
-import { cn } from "@/lib/utils";
+import { textColors } from "@/lib/params";
 
 export default async function RubricTable() {
   return (
-    <div className="m-4">
+    <div className="my-4 max-w-[120em] mx-auto">
       <table className="border border-black border-collapse" id="rubric">
         <thead>
           <tr>

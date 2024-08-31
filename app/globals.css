@@ -102,6 +102,7 @@
   a {
     @apply text-blue-600;
   }
+  
   #rubric {
     @apply table-fixed;
   }
@@ -135,4 +136,8 @@
 }
 span.katex {
   font-size: 115%;
+}
+
+.debug {
+  @apply border-2 border-red-500;
 }
