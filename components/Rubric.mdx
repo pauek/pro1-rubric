@@ -4,10 +4,11 @@ import FormulaFixed from "@/components/FormulaFixed";
 import Quadre from "@/components/Quadre";
 import diagram from "./Rubrica-PRO1-diagram.svg";
 import Image from "next/image";
+import RubricTable from "@/components/RubricTable";
 
 # PRO1: Rúbrica de correcció
 
-La rúbrica té 4 aspectes:
+## Aspectes
 
 <Quadre>
 
@@ -23,7 +24,8 @@ La rúbrica té 4 aspectes:
   - S'utilitza el mínim d'instruccions que aconsegueixen l'objectiu.
   - Hi ha funcions per evitar repetició i dividir el problema en parts.
 
-- <span className="text-yellow-600">**Llegibilitat**</span> ($L$): El programa és comprensible amb molt poc esforç per un altre humà que coneix C++.
+- <span className="text-yellow-600">**Llegibilitat**</span> ($L$): El programa és comprensible
+  amb molt poc esforç per un altre humà que coneix C++.
 
   - Els noms de variables i funcions es corresponen amb la seva utilització real.
   - Els comentaris són adequats.
@@ -58,6 +60,10 @@ Els 4 paràmetres que controlen la fórmula són els factors $\alpha = 0.5$, $\b
 $\gamma = 0.2$ i $\delta = 0.5$ que decideixen la importància de cada aspecte i com
 l'eficiència pondera la nota final. La fórmula genèrica amb aquests paràmetres és:
 $(\alpha \cdot C + \beta \cdot S + \gamma \cdot L) \times ( (1 - \delta)  + \delta \cdot E/10)$.
+
+## Rúbrica
+
+[La rúbrica](/rubrica)
 
 ## Playground
 

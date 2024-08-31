@@ -1,24 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import { Slider } from "./ui/slider";
-import { Label } from "./ui/label";
+import { alpha, beta, backgroundColors, delta, gamma, Grade } from "@/lib/params";
+import { useState } from "react";
 import TaulaDeTipologies from "./TaulaDeTipologies";
-import { alpha, beta, delta, gamma } from "@/lib/params";
+import { Label } from "./ui/label";
+import { Slider } from "./ui/slider";
 
-export type Grade = {
-  C: number;
-  S: number;
-  L: number;
-  E: number;
-};
-
-const colors: Record<keyof Grade, string> = {
-  C: "bg-blue-500",
-  S: "bg-green-600",
-  L: "bg-yellow-500",
-  E: "bg-red-500",
-};
 
 export default function FormulaPlayground() {
   const [state, setState] = useState<Grade>({ C: 0, S: 0, L: 0, E: 0 });
@@ -47,7 +34,7 @@ export default function FormulaPlayground() {
                 max={10}
                 min={0}
                 step={0.5}
-                color={colors[key as keyof Grade]}
+                color={backgroundColors[key as keyof Grade]}
                 onValueChange={([newval]: number[]) =>
                   setState((prev) => ({ ...prev, [key]: newval }))
                 }
@@ -62,10 +49,13 @@ export default function FormulaPlayground() {
           {grade(state).toFixed(1)}
         </div>
       </div>
+      <h2>Classes de problemes i la seva nota</h2>
       <p>
-        Exemples de tipologies de problemes i les seves notes. Aquí té importància
-        mirar els cassos límit per veure l&apos;efecte que tenen els diferents
-        aspectes.
+        Aquesta taula mostra problemes en abstracte però fent la hipòtesi que
+        tenen unes característiques que trobem amb freqüència o bé són exemples
+        límit, exagerant un aspecte fins a l&apos;extrem. Els exemples es poden
+        clicar i recuperar la nota que tenen al <em>Playground</em> d&apos;aquí
+        a sobre.
       </p>
       <div className="flex flex-row justify-center">
         <div>

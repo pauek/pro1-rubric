@@ -66,6 +66,63 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  table {
+    @apply border-collapse my-2;
+  }
+  table th,
+  table td {
+    @apply py-0.5 px-1.5;
+  }
+  p {
+    @apply leading-6 my-4;
+  }
+  ul li p {
+    @apply my-0;
+  }
+  ul ul li {
+    list-style-type: disc;
+    @apply ml-6 text-sm;
+  }
+  ul ul li + li {
+    @apply mt-0 mb-0;
+  }
+  ul li + li {
+    @apply my-4;
+  }
+  ul li:last-child {
+    @apply mb-0;
+  }
+  h1 {
+    @apply font-bold text-3xl mb-4;
+  }
+  h2 {
+    @apply font-bold text-xl mt-10;
+  }
+  a {
+    @apply text-blue-600;
+  }
+  #rubric {
+    @apply table-fixed;
+  }
+  #rubric td {
+    @apply border border-black px-3 py-2 text-sm align-top w-1/5;
+  }
+  #rubric th {
+    @apply border border-black px-3 py-2 font-bold;
+  }
+  #rubric td:first-child, #rubric th:first-child {
+    @apply font-bold align-middle w-12 text-[1.1rem];
+  }
+  #rubric p {
+    @apply m-0 leading-5;
+  }
+  #rubric p + p {
+    @apply mt-2;
+  }
+  #rubric h4 {
+    @apply font-semibold mb-2;
+  }
 }
 
 [aria-hidden="true"] {
@@ -73,37 +130,4 @@
 }
 span.katex {
   font-size: 115%;
-}
-
-table {
-  @apply border-collapse my-2;
-}
-table th,
-table td {
-  @apply py-0.5 px-1.5;
-}
-p {
-  @apply leading-6 my-4;
-}
-ul li p {
-  @apply my-0;
-}
-ul ul li {
-  list-style-type: disc;
-  @apply ml-6 text-sm;
-}
-ul ul li + li {
-  @apply mt-0 mb-0;
-}
-ul li + li {
-  @apply my-4;
-}
-ul li:last-child {
-  @apply mb-0;
-}
-h1 {
-  @apply font-bold text-3xl mb-4;
-}
-h2 {
-  @apply font-bold text-xl mt-10;
 }
